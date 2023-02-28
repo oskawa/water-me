@@ -1,19 +1,19 @@
 <template>
-  <form @submit.prevent="registerUser">
-    <label>
-      Username:
-      <input type="text" v-model="username" />
-    </label>
-    <label>
-      Email:
-      <input type="email" v-model="email" />
-    </label>
-    <label>
-      Password:
-      <input type="password" v-model="password" />
-    </label>
-    <button type="submit">Register</button>
-  </form>
+  <div class="plant-register">
+    <form @submit.prevent="registerUser">
+      <h1>S'inscrire</h1>
+    
+        <input placeholder="Username" type="text" v-model="username" />
+      
+    
+        <input placeholder="Email" type="email" v-model="email" />
+     
+    
+        <input placeholder="Mot de passe" type="password" v-model="password" />
+     
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
 </template>
 
 <script>

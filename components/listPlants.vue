@@ -1,7 +1,8 @@
 <template>
   <div>
-    <ul class="listing-single__ul" v-for="plant in plants" :key="plant.id">
-      <NuxtLink :to="`/plant/${plant.auth.id}`">
+    <ul class="listing-single__ul" >
+      <h1>Ma liste de plantes</h1>
+      <NuxtLink v-for="plant in plants" :key="plant.id" :to="`/plant/${plant.auth.id}`" >
         <li>
           <div class="listing-single">
             <div class="listing-single__image">

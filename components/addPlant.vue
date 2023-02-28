@@ -1,21 +1,21 @@
 <template>
-  <div>
+  <div  class="plant-add">
   
     <form @submit.prevent="addPlant">
       <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="plant.title" required />
+       
+        <input placeholder="Name" type="text" id="name" v-model="plant.title" required />
       </div>
       <div>
-        <label for="description">Description:</label>
-        <textarea id="description" v-model="plant.content" required></textarea>
+        
+        <textarea placeholder="Description" id="description" v-model="plant.content" required></textarea>
       </div>
       <div>
         <label for="watering">Dernier arrosage:</label>
         <input type="date" id="watering" v-model="plant.watering" required />
       </div>
       <div>
-        <label for="frequency">Dernier arrosage:</label>
+        <label for="frequency">Fréquence d'arrosage:</label>
         <input type="number" id="frequency" v-model="plant.frequency" required />
       
       </div>
@@ -72,6 +72,9 @@ export default {
           thumbnail.classList.add("thumbnail");
           thumbnail.style.backgroundImage = `url(${reader.result})`;
           thumbnailsContainer.appendChild(thumbnail);
+          const button = document.createElement('button')
+          button.classList.add("delete");
+            
         };
       }
     });

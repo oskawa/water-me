@@ -6,8 +6,13 @@ body {
     background-color: #f3f4f5;
     overflow: hidden;
     position: relative;
-    max-width: 500px;
-    margin: auto;
+   
+}
+@media screen and (min-width:768px){
+    body{
+        max-width: 500px;
+        margin: auto;
+    }    
 }
 
 .menu-bottom__logged {
@@ -30,6 +35,103 @@ body {
     height: 24px;
 }
 
+/* INDEX PAGE  */
+.index-login{
+    height: 100vh;
+    background-color: #56845a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.index-login__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.index-login__form input{
+    width: 80%;
+    height: 2rem;
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: none;
+
+}
+.index-login__form button{
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+
+}
+.index-login__link{
+    margin: auto;
+    margin-top: 3rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.index-login__link a{
+    text-decoration: none;
+    color: white;
+    
+}
+.index-login__link a:not(:last-child){
+    margin-bottom: 1rem;
+}
+/* INDEX PAGE  */
+
+
+
+.plant-add{
+    height: 93vh;
+    padding: 2rem;
+   
+
+}
+.plant-add input, .plant-add textarea{
+    width: 80%;
+    height: 2rem;
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: none;
+}
+
+
+
+
+.plant-register{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.plant-register input{
+    width: 80%;
+    height: 2rem;
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: none;
+}
+.plant-register form{
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-register button{
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+
+}
 /* SINGLE PLANT PAGE  */
 
 .container-plant__img {
@@ -101,6 +203,7 @@ body {
 }
 #container-plant__water-content {
     font-size: 1.5rem;
+    z-index: 10;
 }
 #container-plant__water-content span {
     font-family: "Gloock", serif;
@@ -149,24 +252,28 @@ body {
 }
 .edit-plant {
     position: absolute;
-    bottom: 4rem;
-    right: 4rem;
+    bottom: 1rem;
+    right: 1rem;
     background-color: #9cb99f;
     z-index: 10;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 .edit-plant:hover {
     background-color: #56845a;
 }
 .edit-plant a {
-    display: block;
-    padding: 1.3rem;
+    display: flex;
+   width: 50px;
+   height: 50px;
     border-radius: 50%;
-    z-index: 10;
+    justify-content: center;
+    align-items: center;
 }
 .edit-plant a svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 /* END SINGLE PLANT PAGE  */
 
@@ -186,10 +293,19 @@ ul {
     list-style: none;
 
     margin: 0.5rem;
+
+}
+.listing-single__ul{
+    overflow: auto;
+    height: 93vh;
+}
+.listing-single__ul a{
     border: 1px solid black;
     border-radius: 20px;
+    display: block;
+    margin-bottom: 1rem;
+    background-color: rgb(241, 241, 241);
 }
-
 .listing-single__image {
     width: 100px;
     height: 100px;

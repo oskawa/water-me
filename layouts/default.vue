@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nuxt />
-    <div v-if="this.$auth" class="menu-bottom__logged">
+    <div v-if="this.$auth.user" class="menu-bottom__logged">
       <NuxtLink to="/">
         <svg
           width="44"
